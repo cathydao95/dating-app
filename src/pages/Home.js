@@ -22,16 +22,12 @@ function Home() {
         setIsSignUp={setIsSignUp}
       />
       <div className="home">
-        <h1>Swipe Right</h1>
+        <h1 className="primary-title">Swipe Right</h1>
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "Log Off" : "Create Account"}
         </button>
         {showModal && (
-          <AuthModal
-            setShowModal={setShowModal}
-            isSignUp={isSignUp}
-            setIsSignUp={setIsSignUp}
-          />
+          <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
         )}
       </div>
     </div>
