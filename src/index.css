@@ -2,14 +2,16 @@ html,
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 * {
   font-family: sans-serif;
 }
 
-body {
-  text-align: center;
+.primary-title {
+  font-size: 90px;
+  color: white;
 }
 
 h2 {
@@ -80,12 +82,19 @@ nav {
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  background-image: url("images/homepage.png");
+  background-size: cover;
 }
 
+.home {
+  margin-top: 30vh;
+}
 /* Auth Modal */
 .auth-modal {
-  /* position: absolute; */
-  top: 175px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
   margin-left: auto;
   margin-right: auto;
   max-width: 360px;
@@ -109,4 +118,186 @@ nav {
   padding: 8px;
   margin: 8px;
   font-size: 18px;
+}
+
+/* ONBOARDING PAGE */
+.onboarding {
+  border-top: solid 1px rgb(213, 213, 213);
+}
+.onboarding form {
+  display: flex;
+  justify-content: center;
+}
+
+.onboarding form section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: start;
+}
+
+.onboarding form input {
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 15px;
+  border: solid 2px rgb(219, 219, 219);
+  border-radius: 10px;
+}
+
+/* WHAT IS WEBKIT?? BELOW CODE NOT WORKING */
+.onboarding form input::-webkit-inner-spin-button,
+.onboarding form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.onboarding form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.onboarding form .multiple-input-container input {
+  margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container label {
+  padding: 10px;
+  border: solid 2px rgb(144, 144, 144);
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.onboarding form input[type="radio"] {
+  display: none;
+}
+
+.onboarding form input[type="number"] {
+  width: 10%;
+}
+
+.onboarding form input[type="radio"]:checked + label {
+  border: solid 2px rgb(221, 39, 22);
+}
+
+.onboarding form input[type="submit"]:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+/* ACTIVE IS WHEN CLICKED */
+.onboarding form input[type="submit"]:active {
+  background-color: rgb(2265, 115, 155);
+}
+
+/* PHOTO CONTAINER */
+.photo-container img {
+  width: 100%;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swipe-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.swipe {
+  position: absolute;
+}
+
+.card-container {
+  width: 400px;
+
+  height: 650px;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 400px;
+  height: 650px;
+
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 {
+  margin-top: 0px;
+}
+
+.swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+/* CHAT CONTAINER/HEADER */
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 40%;
+  text-align: left;
+  z-index: 1;
+}
+
+.chat-container-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(260deg, #fe3072, #ff5948);
+}
+
+.option {
+  border: none;
+  background-color: white;
+  border-bottom: solid 4px rgb(243, 33, 33);
+  font-size: 20px;
+  margin: 2px;
+  padding: 10px;
+}
+
+.option:disabled {
+  border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.profile {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+/* CHAT */
+.chat-display {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+/* CHAT INPUT */
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
